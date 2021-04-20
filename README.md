@@ -13,7 +13,29 @@ With Callback Stack architecture, the Pyramid of Doom is gracefully reduced to n
 
 ## Basic Usage 
 
-### 1. Simple stack with only 1 node
+### 1. Counter example
+
+```jsx harmony
+cs(
+    ["count", ({}, next) => State({initValue: 0, next})],
+    ({count})=>(
+        <div>
+            Count: {count.value}
+            <button
+                onClick={()=>count.change((v)=>v+1)}
+            >+</button>
+
+            <button
+                onClick={()=>count.change((v)=>v-1)}
+            >-</button>
+        </div>
+    ),
+)
+```
+Here is the CodePen [demo](https://codepen.io/quanla/pen/JjEmOpP?editors=0010)
+
+
+### 2. Simple stack with only 1 node
 
 This is the most simple form of stack, a stack with only 1 node:
 
@@ -35,7 +57,7 @@ The code above will work exactly like the following JSX code:
 </div>
 ```
 
-### 2. Chain with 2 nodes
+### 3. Chain with 2 nodes
 
 Let's add another node to make a proper "stack"
 ```jsx harmony
@@ -68,7 +90,7 @@ The code above will work exactly like the following JSX code:
 
 As you can see here, the second node is applied precisely where we call "next" in the first stack command
 
-### 3. Chain with variable assignment
+### 4. Chain with variable assignment
 
 Let's modify the above sample a little bit, and see something strange happen:
 ```jsx harmony
@@ -102,7 +124,7 @@ The code above will work exactly like the following JSX code:
 In the 1st node, whatever value we pass into the "next()" function call will be available in following nodes as a variable named "aaa".
 
 
-### 4. Direct value passing
+### 5. Direct value passing
 
 Sometimes, a stack node only call directly the "next()" function to set variable:
 ```jsx harmony
@@ -123,7 +145,7 @@ The code above will work exactly like the following JSX code:
 </div>
 ```
 
-### 5. Sample usage with React Context
+### 6. Sample usage with React Context
 
 With Callback Stack:
 
@@ -169,7 +191,7 @@ Without Callback Stack:
 
 You can imagine if we need to consume a few more context values, the indentation will be increased to the point that we no longer recognise our own code
 
-### 6. Short-circuit stack (or conditional next)
+### 7. Short-circuit stack (or conditional next)
 
 The "next()" function provides a control to the flow of stack, and coder can decide where and when to call to next to execute the subsequence commands in the stack. In case "next()" is not called, the subsequence commands in the stack will not be executed at all, and appear to be totally cut-off
 
@@ -208,7 +230,7 @@ Equivalent to the following JSX code:
 </div>
 ```
 
-### 7. Repeating
+### 8. Repeating
 
 We can call "next()" more than once in a node, and each time it's called, the subsequence nodes are executed independently
 
@@ -256,7 +278,7 @@ JSX equivalence:
 </div>
 ```
 
-### 8. Let's try using callback stack without React
+### 9. Let's try using callback stack without React
 
 Since "cs" (Callback Stack) is a pure JS function with no dark corner, it's framework agnostic and can be used outside of React. Let's try a console.log:
 
