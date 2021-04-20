@@ -1,0 +1,19 @@
+{
+  "name": "cs-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callback-stack/cs-react.git"
+  },
+  "author": "quanla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/callback-stack/cs-react/issues"
+  },
+  "homepage": "https://github.com/callback-stack/cs-react#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
+}
