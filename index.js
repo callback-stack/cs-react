@@ -26,3 +26,11 @@ exports.Static = Static;
 const {StaticRef} = require("./react/static-ref");
 exports.StaticRef = StaticRef;
 
+const {keyed, keyed1} = require("./react/keyed");
+exports.keyed = keyed;
+exports.keyed1 = keyed1;
+
+const {fragments, fragments2} = require("./react/fragments");
+exports.fragments = fragments;
+exports.fragments2 = fragments2;
+
