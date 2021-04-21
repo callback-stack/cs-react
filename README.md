@@ -51,7 +51,7 @@ The code above will work exactly like the following JSX code:
 </div>
 ```
 
-### 3. Chain with 2 nodes
+### 3. Stack with 2 nodes
 
 Let's add another node to make a proper "stack"
 ```jsx harmony
@@ -84,7 +84,7 @@ The code above will work exactly like the following JSX code:
 
 As you can see here, the second node is applied precisely where we call "next" in the first stack command
 
-### 4. Chain with variable assignment
+### 4. Stack with variable assignment
 
 Let's modify the above sample a little bit, and see something strange happen:
 ```jsx harmony

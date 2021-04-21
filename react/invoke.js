@@ -23,6 +23,6 @@ class Invoke1 extends Component {
 
     render() {
         const {next} = this.props;
-        return next?.() ?? null;
+        return next ? next() : null;
     }
 }
