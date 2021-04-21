@@ -1,19 +1,13 @@
 
-
 # The Callback Stack architecture
 
 ## Introduction
 
-In React, there is a powerful technique called Render Props which is not fully understood and used. The whole purpose of Callback Stack is to make full use of Render Props, minimizing all of its shortcomings and explore the usages that is known to no one before.
-
-Although Render Props is a pure and elegant solution to many problems, its main shortcoming is the Pyramid of Doom problem which is so obvious and deal breaker to many people. Since Pyramid of Doom scares people away at the very first sight, there is hardly any one spend enough time and effort to explore all the goodness, and the progress of exploring the Render Props technique is very limited so far.
-
-With Callback Stack architecture, the Pyramid of Doom is gracefully reduced to non-existence, while maintaining most of the goodness that Render Props brings
-
+The Callback Stack architecture is Render Props on steroids.  
 
 ## Basic Usage 
 
-### 1. Counter example
+### 1. The Counter example
 
 ```jsx harmony
 cs(
