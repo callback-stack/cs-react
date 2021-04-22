@@ -1,4 +1,4 @@
-const {getPath, setPath, changePath} = require("../utils/arr-path");
+const {getPath, setPath, changePath} = require("./arr-path");
 
 const scope = (state, path) => ({
     value: getPath(state.value, path),

@@ -34,3 +34,14 @@ const {fragments, fragments2} = require("./react/fragments");
 exports.fragments = fragments;
 exports.fragments2 = fragments2;
 
+const {Load} = require("./react/load/load");
+exports.Load = Load;
+
+const {Load2} = require("./react/load/load2");
+exports.Load2 = Load2;
+
+const {provideContext} = require("./react/context/provide-context");
+exports.provideContext = provideContext;
+
+const {consumeContext} = require("./react/context/consume-context");
+exports.consumeContext = consumeContext;

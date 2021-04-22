@@ -1,22 +1,22 @@
 const {fragments} = require("../fragments");
 const {keyed} = require("../keyed");
-const {scope} = require("../scope");
-const {cs} = require("../../callback-stack");
+const {scope} = require("../../utils/scope");
+const {cbs} = require("../../callback-stack");
 const {State} = require("../state");
 const {Invoke} = require("../invoke");
 
-const Load2 = ({fetch, next, keepOutdatedValue, props, _key}) => cs(
+const Load2 = ({fetch, next, keepOutdatedValue, props, _key}) => cbs(
     ["loaded", (_, next) => State({next})],
     ({loaded}) => {
         const loading = loaded.value == null || loaded.value.key !== _key;
 
         return fragments(
-            loading && cs(
+            loading && cbs(
                 keyed(_key),
                 () => (
                     Invoke({
                         props,
-                        fn: async ({isMounted, getLatestProps}) => {
+                        action: async ({isMounted, getLatestProps}) => {
                             const value = await fetch({getLatestProps});
                             if (!isMounted() && loaded.value) {
                                 return;
