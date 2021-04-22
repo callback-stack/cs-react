@@ -45,3 +45,6 @@ exports.provideContext = provideContext;
 
 const {consumeContext} = require("./react/context/consume-context");
 exports.consumeContext = consumeContext;
+
+const {bindInput} = require("./react/bind-input");
+exports.bindInput = bindInput;
