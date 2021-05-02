@@ -1,6 +1,6 @@
 const {fragments} = require("../fragments");
 const {keyed} = require("../keyed");
-const {scope} = require("../../utils/scope");
+const {scope} = require("../scope");
 const {cbs} = require("../../callback-stack");
 const {State} = require("../state");
 const {Invoke} = require("../invoke");

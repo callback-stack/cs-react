@@ -48,3 +48,6 @@ exports.consumeContext = consumeContext;
 
 const {bindInput} = require("./react/bind-input");
 exports.bindInput = bindInput;
+
+const {scope} = require("./react/scope");
+exports.scope = scope;

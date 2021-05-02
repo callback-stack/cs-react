@@ -16,11 +16,11 @@ cs(
         <div>
             Count: {count.value}
             <button
-                onClick={()=>count.change((v)=>v+1)}
+                onClick={() => count.change((v)=>v+1)}
             >+</button>
 
             <button
-                onClick={()=>count.change((v)=>v-1)}
+                onClick={() => count.change((v)=>v-1)}
             >-</button>
         </div>
     ),
